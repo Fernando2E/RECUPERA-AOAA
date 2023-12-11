@@ -6,9 +6,9 @@ fmr.addEventListener("submit", (e)=>{
     e.preventDefault()
 
     const valor = Number(fmr.inValor.value)
-    const num = Number(frm.inParcela.value)
+    const num = Number(fmr.inParcela.value)
     const valorParcela = Math.floor(valor /num)
-    let valorFinal = valorFinal + (valor % num)
+    let valorFinal = valorParcela + (valor % num)
     let resposta = ""
     for(let i = 1; i < num; i++){
         resposta = resposta + i +"° Parcela: R$" + valorFinal.toFixed(2) + "\n"
